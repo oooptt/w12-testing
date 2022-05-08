@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - bowling
   pull_request:
 
 
