@@ -34,6 +34,18 @@ export class Potter {
   get price() {
     let price = 0;
     while (this.allbook > 0) {
+      if (this.allbook == 8) {
+        let pair_num = 0;
+        for (let index = 0; index < this.allbook; index++) {
+          if (this.bookcase[index] == 2)
+            pair_num++;
+        }
+        if (pair_num == 3) {
+          price += 8 * 0.8 * 4 * 2;
+          return price;
+        }
+      }
+
       let round = 0;
       for (let index = 0; index < 5; index++) {
         if (this.bookcase[index] > 0) {
@@ -45,7 +57,7 @@ export class Potter {
 
       switch (round) {
         case 1:
-          price += 8; 
+          price += 8;
           break;
         case 2:
           price += 8 * 0.95 * 2;
