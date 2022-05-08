@@ -45,7 +45,7 @@ export class Potter {
 
       switch (round) {
         case 1:
-          price += 8;
+          price += 8; 
           break;
         case 2:
           price += 8 * 0.95 * 2;
